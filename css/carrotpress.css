@@ -1,0 +1,89 @@
+/* Core */
+input[type="checkbox"]:checked::before,
+input[type="radio"]:checked::before,
+/* Media */
+.wp-core-ui .attachment .check .media-modal-icon::before,
+/* Block Editor */
+.components-checkbox-control__input[type="checkbox"]:checked::before,
+.components-radio-control__input[type="radio"]:checked::before {
+	display: block !important;
+	content: '\f511';
+	color: #D46F15;
+	font-size: 24px;
+	position: relative;
+	font-family: 'dashicons';
+	text-shadow:
+		 1px  1px 0 #fff,
+		-1px  1px 0 #fff,
+		 1px -1px 0 #fff,
+		-1px -1px 0 #fff;
+}
+
+/* Core */
+input[type=checkbox]:checked::before {
+	top: 4px;
+	left: 5px;
+}
+
+input[type=radio]:checked::before {
+	margin: 0;
+	background-color: transparent;
+	text-indent: 0;
+	top: -8px;
+	left: -3px;
+}
+
+@media screen and (max-width: 782px) {
+	input[type=checkbox]:checked::before {
+		font-size: 32px;
+		top: 9px;
+		left: 5px;
+	}
+	input[type=radio]:checked::before {
+		font-size: 32px;
+		top: -3px;
+		left: -2px;
+	}
+}
+
+/*
+ * Media Library
+ */
+.wp-core-ui .attachment .check .media-modal-icon {
+	background: transparent;
+}
+.wp-core-ui .attachment .check .media-modal-icon::before {
+	top: -6px;
+	left: -5px;
+}
+
+/*
+ * Block Editor
+ */
+.components-checkbox-control__input[type="checkbox"]:checked + svg {
+	display: none;
+}
+.components-checkbox-control__input[type="checkbox"]:checked::before {
+	top: 10px;
+	font-size: 28px;
+}
+.components-radio-control__input[type="radio"]:checked::before,
+.block-editor [type="radio"]:checked::before {
+	top: -15px;
+	left: -12px;
+	background: transparent !important;
+}
+@media (min-width: 600px) {
+	.components-checkbox-control__input[type="checkbox"]:checked::before {
+		top: -8px;
+	}
+	.components-radio-control__input[type="radio"]:checked::before,
+	.block-editor [type="radio"]:checked::before {
+		top: -13px;
+	}
+}
+@media (min-width: 782px) {
+	.components-checkbox-control__input[type="checkbox"]:checked::before {
+		top: -7px;
+	}
+}
